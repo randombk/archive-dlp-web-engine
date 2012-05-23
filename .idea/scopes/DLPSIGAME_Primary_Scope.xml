@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="DLPSIGAME Primary Scope" pattern="((file:engine/*||file:handlebars/*.tmpl||file:pages/*||file:resources/*||file:ajaxRequest.php||file:game.php||file:index.php||file:testbed.php||file:.gitignore||file:robots.txt||file:engine//*)&amp;&amp;!file:engine/libs/*&amp;&amp;!file:engine/libs//*&amp;&amp;!file:engine/error.log||file:pages//*||file:resources//*)&amp;&amp;!file:resources/js/vendor//*&amp;&amp;!file:resources/css/vendor//*" />
+</component>

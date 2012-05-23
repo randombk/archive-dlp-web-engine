@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="DLPSIGAME Json Game Files" pattern="file:engine/data//*" />
+</component>
