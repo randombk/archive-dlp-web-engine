@@ -407,6 +407,12 @@
     <inspection_tool class="PhpUndefinedFieldInspection" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="NOTIFY_ACCESS_VIA_MAGIC_METHOD" value="false" />
     </inspection_tool>
+    <inspection_tool class="PhpUndefinedMethodInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="DOWNGRADE_SEVERITY" value="true" />
+    </inspection_tool>
+    <inspection_tool class="PhpUnusedParameterInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false">
+      <option name="DONT_REPORT_ABSTRACT_CLASS" value="true" />
+    </inspection_tool>
     <inspection_tool class="PlatformDetectionJS" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="PointlessArithmeticExpression" enabled="false" level="WARNING" enabled_by_default="false">
       <option name="m_ignoreExpressionsContainingConstants" value="false" />
