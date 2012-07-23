@@ -1,20 +1,24 @@
 <?php
 /*
  * (C) Copyright 2012 David J. W. Li
- * Project DLPSIGAME
+ * DLPWEBENGINE
+ * Forked from Build 0.2.2.432 of Project DLPSIGAME
+ *
  */
 
 /**
  * Class Math
  */
-class Math {
+class Math
+{
 	/**
 	 * @param float $min
 	 * @param float $max
 	 * @return mixed
 	 */
-	static function mt_randf($min, $max) {
-		return $min + abs($max - $min) * mt_rand(0, mt_getrandmax())/mt_getrandmax(); 
+	static function mt_randf($min, $max)
+	{
+		return $min + abs($max - $min) * mt_rand(0, mt_getrandmax()) / mt_getrandmax();
 	}
 
 	/**
@@ -22,9 +26,10 @@ class Math {
 	 * @param int $die
 	 * @return int
 	 */
-	static function nDn($rolls, $die) {
+	static function nDn($rolls, $die)
+	{
 		$total = 0;
-		for ($i=0; $i < $rolls; $i++) { 
+		for ($i = 0; $i < $rolls; $i++) {
 			$total += mt_rand(0, $die);
 		}
 		return $total;
@@ -35,9 +40,10 @@ class Math {
 	 * @param float $die
 	 * @return float
 	 */
-	static function nDnf($rolls, $die) {
+	static function nDnf($rolls, $die)
+	{
 		$total = 0;
-		for ($i=0; $i < $rolls; $i++) { 
+		for ($i = 0; $i < $rolls; $i++) {
 			$total += self::mt_randf(0, $die);
 		}
 		return $total;

@@ -7,9 +7,9 @@
  */
 
 /**
- * Class LoginErrorPage
+ * Class LoginStaticPage
  */
-class LoginErrorPage extends LoginAbstractPage {
+ class LoginStaticPage extends LoginAbstractPage {
 	/**
 	 *
 	 */
@@ -18,11 +18,11 @@ class LoginErrorPage extends LoginAbstractPage {
 		$this->initTemplate();
 	}
 
-	/**
-	 * @param string $Message
-	 */
-	static function printError($Message) {
+	 /**
+	  * @param string $page
+	  */
+	 static function showStatic($page) {
 		$pageObj = new self;
-		$pageObj->showMessage($Message);
+		$pageObj->render('static_'.$page.'.tpl');
 	}
 }

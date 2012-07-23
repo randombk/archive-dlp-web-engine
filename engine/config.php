@@ -1,12 +1,13 @@
 <?php
 /*
  * (C) Copyright 2012 David J. W. Li
- * Project DLPSIGAME
+ * DLPWEBENGINE
+ * Forked from Build 0.2.2.432 of Project DLPSIGAME
+ *
  */
 
-$GLOBALS['_GAME_VERSION'] 		= "0.2.2";
-$GLOBALS['_GAME_NAME'] 			= "Project DLPSIGAME";
-$GLOBALS['_GAME_SPEED'] 		= 1;
+$GLOBALS['_SITE_VERSION'] 		= "1.0";
+$GLOBALS['_SITE_NAME'] 			= "DLPWEBENGINE";
 
 $GLOBALS['_RECAPTCHA_PRIVKEY']	= "6LdYFOYSAAAAAAUhob-YXBBmS8eVDpdkZwPSqtmB";
 $GLOBALS['_RECAPTCHA_PUBKEY']	= "6LdYFOYSAAAAAAoQ0sBmC2wAMOstRQEU-Ihy9kqX";

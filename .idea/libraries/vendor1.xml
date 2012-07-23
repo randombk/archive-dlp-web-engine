@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="vendor1">
-    <CLASSES />
-    <JAVADOC />
-    <SOURCES>
-      <root url="file://$PROJECT_DIR$/resources/css/vendor" />
-    </SOURCES>
-  </library>
-</component>

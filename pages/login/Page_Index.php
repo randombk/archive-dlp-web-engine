@@ -1,7 +1,9 @@
 <?php
 /*
  * (C) Copyright 2012 David J. W. Li
- * Project DLPSIGAME
+ * DLPWEBENGINE
+ * Forked from Build 0.2.2.432 of Project DLPSIGAME
+ *
  */
 
 /**
@@ -28,8 +30,7 @@ class Page_Index extends LoginAbstractPage {
 		}
 
 		$this->assign(array(
-			 'code' => $loginCode,
-			 'loginInfo' => 'By logging in, I agree with the <a href="index.php?page=rules">Rules</a>'
+			 'code' => $loginCode
 		));
 
 		$this->render('page_index.tpl');

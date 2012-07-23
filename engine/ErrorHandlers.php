@@ -1,7 +1,9 @@
 <?php
 /*
  * (C) Copyright 2012 David J. W. Li
- * Project DLPSIGAME
+ * DLPWEBENGINE
+ * Forked from Build 0.2.2.432 of Project DLPSIGAME
+ *
  */
 
 /**
@@ -112,7 +114,7 @@ function base_ajaxException($exception) {
 		 E_STRICT => 'STRICT NOTICE',
 		 E_RECOVERABLE_ERROR => 'RECOVERABLE ERROR'
 	);
-	
+
 	$errorText = date("[d-M-Y H:i:s]", TIMESTAMP) . ' ' . $errorType[$errno] . ': "' . strip_tags($exception->getMessage()) . "\"\r\n";
 	$errorText .= 'File: ' . $exception->getFile() . ' | Line: ' . $exception->getLine() . "\r\n";
 	$errorText .= 'URL: ' . PROTOCOL . HTTP_HOST . $_SERVER['REQUEST_URI'] . "\r\n";

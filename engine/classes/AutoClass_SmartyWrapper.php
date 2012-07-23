@@ -1,7 +1,9 @@
 <?php
 /*
  * (C) Copyright 2012 David J. W. Li
- * Project DLPSIGAME
+ * DLPWEBENGINE
+ * Forked from Build 0.2.2.432 of Project DLPSIGAME
+ *
  */
 
 require(ROOT_PATH . 'engine/libs/Smarty/Smarty.class.php');
@@ -9,18 +11,21 @@ require(ROOT_PATH . 'engine/libs/Smarty/Smarty.class.php');
 /**
  * Class SmartyWrapper
  */
-class SmartyWrapper extends Smarty {
+class SmartyWrapper extends Smarty
+{
 	protected $window = 'full';
 
 	/**
 	 *
 	 */
-	function __construct() {
+	function __construct()
+	{
 		parent::__construct();
 		$this->smartySettings();
 	}
 
-	function smartySettings() {
+	function smartySettings()
+	{
 		$this->force_compile = false;
 		$this->caching = false; #TODO: Set true for production
 		$this->merge_compiled_includes = true;
@@ -41,14 +46,16 @@ class SmartyWrapper extends Smarty {
 	 * @param array $var
 	 * @param bool $nocache
 	 */
-	public function assign_vars($var, $nocache = true) {
+	public function assign_vars($var, $nocache = true)
+	{
 		parent::assign($var, NULL, $nocache);
 	}
 
 	/**
 	 * @param string $file
 	 */
-	public function show($file) {
+	public function show($file)
+	{
 		$this->compile_id = "en";
 		parent::display($file);
 	}
@@ -56,7 +63,8 @@ class SmartyWrapper extends Smarty {
 	/**
 	 * @param string $file
 	 */
-	public function display($file) {
+	public function display($file)
+	{
 		$this->compile_id = "en";
 		parent::display($file);
 	}

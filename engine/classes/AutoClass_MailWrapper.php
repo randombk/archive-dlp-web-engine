@@ -1,13 +1,16 @@
 <?php
 /*
  * (C) Copyright 2012 David J. W. Li
- * Project DLPSIGAME
+ * DLPWEBENGINE
+ * Forked from Build 0.2.2.432 of Project DLPSIGAME
+ *
  */
 
 /**
  * Class MailWrapper
  */
-class MailWrapper {
+class MailWrapper
+{
 
 	/**
 	 * @param string $MailTarget
@@ -15,12 +18,13 @@ class MailWrapper {
 	 * @param string $MailSubject
 	 * @param string $MailContent
 	 */
-	static function send($MailTarget, $MailTargetName, $MailSubject, $MailContent) {
+	static function send($MailTarget, $MailTargetName, $MailSubject, $MailContent)
+	{
 		$transport = self::getSwiftTransport();
 		$mailer = Swift_Mailer::newInstance($transport);
 
 		$mailFrom = $GLOBALS['_MAIL_SMTP_USER'];
-		$mailTo = $GLOBALS['_GAME_NAME'];
+		$mailTo = $GLOBALS['_SITE_NAME'];
 
 		$mail = Swift_Message::newInstance();
 		$mail->setSubject($MailSubject);
@@ -36,12 +40,13 @@ class MailWrapper {
 	 * @param string $MailSubject
 	 * @param string $MailContent
 	 */
-	static function multiSend($MailTargets, $MailSubject, $MailContent = NULL) {
+	static function multiSend($MailTargets, $MailSubject, $MailContent = NULL)
+	{
 		$transport = self::getSwiftTransport();
 		$mailer = Swift_Mailer::newInstance($transport);
 
 		$mailFrom = $GLOBALS['_MAIL_SMTP_USER'];
-		$mailTo = $GLOBALS['_GAME_NAME'];
+		$mailTo = $GLOBALS['_SITE_NAME'];
 
 		$mail = Swift_Message::newInstance();
 		$mail->setSubject($MailSubject);
@@ -49,7 +54,7 @@ class MailWrapper {
 
 		foreach ($MailTargets as $address => $data) {
 			$content = isset($data['body']) ? $data['body'] : $MailContent;
-			$mail->setTo(array($address => $data['playername']));
+			$mail->setTo(array($address => $data['username']));
 			$mail->setBody(strip_tags($content));
 			$mail->addPart($content, 'text/html');
 
@@ -60,7 +65,8 @@ class MailWrapper {
 	/**
 	 * @return Swift_SmtpTransport
 	 */
-	static function getSwiftTransport() {
+	static function getSwiftTransport()
+	{
 		require_once(ROOT_PATH . 'engine/libs/swift/lib/swift_required.php');
 		$transport = Swift_SmtpTransport::newInstance($GLOBALS['_MAIL_SMTP_HOST'], $GLOBALS['_MAIL_SMTP_PORT']);
 		$transport->setEncryption($GLOBALS['_MAIL_SMTP_ENC']);

@@ -1,44 +1,30 @@
 <?php
 /*
  * (C) Copyright 2012 David J. W. Li
- * Project DLPSIGAME
+ * DLPWEBENGINE
+ * Forked from Build 0.2.2.432 of Project DLPSIGAME
+ *
  */
 
 /**
  * Class AjaxRequest
  */
-abstract class AjaxRequest {
+abstract class AjaxRequest
+{
 	/**
 	 *
 	 */
-	function __construct() {	}
-
-	/**
-	 * @param array $data
-	 * @param int $code
-	 */
-	protected function sendJSON($data, $code = 0) {
-		if($code != 0) $data['code'] = $code;
-		echo json_encode($data);
-		exit;
+	function __construct()
+	{
 	}
 
 	/**
 	 * @param array $data
-	 * @param ObjectEnvironment $objectEnv
 	 * @param int $code
 	 */
-	protected function sendJSONWithObjectData($data, $objectEnv, $code = 0) {
-		if($code != 0) $data['code'] = $code;
-
-		$data["objectID"] = $objectEnv->objectID;
-		$data["objectName"] = $objectEnv->objectName;
-		$data["objectCoords"] = $objectEnv->envObjectCoord->getCoordString();
-		$data["objectBuildings"] = $objectEnv->envBuildings->getDataArray();
-		$data["objectItems"] = UtilItem::buildItemDataArray($objectEnv->envItems);
-		$data["objectData"] = $objectEnv->envObjectData;
-		$data["notifications"] = Message::getNotifications($_SESSION['playerID'], 0, 50);
-
+	protected function sendJSON($data, $code = 0)
+	{
+		if ($code != 0) $data['code'] = $code;
 		echo json_encode($data);
 		exit;
 	}
@@ -46,7 +32,8 @@ abstract class AjaxRequest {
 	/**
 	 * @param int $code
 	 */
-	protected function sendCode($code = 0) {
+	protected function sendCode($code = 0)
+	{
 		echo json_encode(array("code" => $code));
 		exit;
 	}
@@ -54,7 +41,8 @@ abstract class AjaxRequest {
 	/**
 	 * @param string $str
 	 */
-	protected function sendJSONStr($str) {
+	protected function sendJSONStr($str)
+	{
 		echo $str;
 		exit;
 	}

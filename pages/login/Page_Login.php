@@ -1,7 +1,9 @@
 <?php
 /*
  * (C) Copyright 2012 David J. W. Li
- * Project DLPSIGAME
+ * DLPWEBENGINE
+ * Forked from Build 0.2.2.432 of Project DLPSIGAME
+ *
  */
 
 /**
@@ -20,23 +22,23 @@ class Page_Login extends LoginAbstractPage {
 			HTTP::redirectTo('index.php');
 		}
 
-		$playername = HTTP::REQ('playername', '', true);
+		$username = HTTP::REQ('username', '', true);
 		$password = HTTP::REQ('password', '', true);
-		
-		$loginData = DBMySQL::selectTop(tblPLAYERS, "playerName = :playerName", array(":playerName" => $playername), "playerID, playerPass, validationKey");
-		
+
+		$loginData = DBMySQL::selectTop(tblPLAYERS, "userName = :userName", array(":userName" => $username), "userID, userPass, validationKey");
+
 		if (isset($loginData)) {
-			$hashedPassword = UtilPlayer::cryptPassword($password);
-			if ($loginData['playerPass'] != $hashedPassword) {
+			$hashedPassword = UtilUser::cryptPassword($password);
+			if ($loginData['userPass'] != $hashedPassword) {
 				HTTP::redirectTo('index.php?code=1');
 			}
-			
+
 			if(strlen($loginData['validationKey'])) {
 				HTTP::redirectTo('index.php?code=2');
 			}
-			
-			GameSession::loginPlayer($loginData['playerID'], $playername);
-			HTTP::redirectTo('game.php');
+
+			SiteSession::loginPlayer($loginData['userID'], $username);
+			HTTP::redirectTo('secure.php?page=overview');
 		} else {
 			HTTP::redirectTo('index.php?code=1');
 		}

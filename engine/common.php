@@ -1,7 +1,9 @@
 <?php
 /*
  * (C) Copyright 2012 David J. W. Li
- * Project DLPSIGAME
+ * DLPWEBENGINE
+ * Forked from Build 0.2.2.432 of Project DLPSIGAME
+ *
  */
 
 /**
@@ -43,6 +45,5 @@ define('TIMESTAMP', time());
 
 date_default_timezone_set($GLOBALS['_SERVER_TZ']);
 
-//Connect to databases
-$GLOBALS["GameCache"] = array();
+$GLOBALS["SiteCache"] = array();
 

@@ -1,7 +1,9 @@
 <?php
 /*
  * (C) Copyright 2012 David J. W. Li
- * Project DLPSIGAME
+ * DLPWEBENGINE
+ * Forked from Build 0.2.2.432 of Project DLPSIGAME
+ *
  */
 
 define('MODE', 'LOGIN');
@@ -14,31 +16,39 @@ set_error_handler('base_interfaceError');
 
 require (ROOT_PATH . 'pages/login/LoginAbstractPage.php');
 require (ROOT_PATH . 'pages/login/LoginErrorPage.php');
+require (ROOT_PATH . 'pages/login/LoginStaticPage.php');
 
 if (!isset($GLOBALS['INIT'])) {
 	require (ROOT_PATH . 'engine/common.php');
 }
 
-$page = HTTP::REQ('page', 'index');
-$mode = HTTP::REQ('mode', 'show');
-$mode = str_replace(array('_', '\\', '/', '.', "\0"), '', $mode);
-$pageName = strictString(str_replace(' ','',ucwords(str_replace('-',' ',strtolower($page)))));
-$pageClass = 'Page_' . $pageName;
-$pageSrc = ROOT_PATH . 'pages/login/' . $pageClass . '.php';
+//if($_SERVER['VERIFIED'] === "SUCCESS") {
+	$page = HTTP::REQ('page', 'index');
+	$mode = HTTP::REQ('mode', 'show');
+	$mode = str_replace(array('_', '\\', '/', '.', "\0"), '', $mode);
+	$pageName = strictString(str_replace(' ','',ucwords(str_replace('-',' ',strtolower($page)))));
+	$pageClass = 'Page_' . $pageName;
+	$pageSrc = ROOT_PATH . 'pages/login/' . $pageClass . '.php';
 
-if (!file_exists($pageSrc)) {
-	LoginErrorPage::printError("Requested Page not Found");
-} else {
-	require ($pageSrc);
-	$pageObj = new $pageClass;
-	$pageProps = get_class_vars($pageClass);
-	
-	if (!is_callable(array($pageObj, $mode))) {
-		if (!isset($pageProps['defaultController']) || !is_callable(array($pageObj, $pageProps['defaultController']))) {
+	if (!file_exists($pageSrc)) {
+		if (!file_exists(ROOT_PATH . 'pages/login/html/static_' . $pageName . '.tpl')) {
 			LoginErrorPage::printError("Requested Page not Found");
+		} else {
+			LoginStaticPage::showStatic($pageName);
 		}
-		$mode = $pageProps['defaultController'];
-	}
-	$pageObj -> {$mode}();
-}
+	} else {
+		require ($pageSrc);
+		$pageObj = new $pageClass;
+		$pageProps = get_class_vars($pageClass);
 
+		if (!is_callable(array($pageObj, $mode))) {
+			if (!isset($pageProps['defaultController']) || !is_callable(array($pageObj, $pageProps['defaultController']))) {
+				LoginErrorPage::printError("Requested Page not Found");
+			}
+			$mode = $pageProps['defaultController'];
+		}
+		$pageObj -> {$mode}();
+	}
+//} else {
+//	LoginErrorPage::printError("Unable to verify client certificate");
+//}

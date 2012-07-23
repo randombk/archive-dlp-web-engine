@@ -6,10 +6,11 @@
  *
  */
 
+
 /**
- * Class LoginErrorPage
+ * Class SecureErrorPage
  */
-class LoginErrorPage extends LoginAbstractPage {
+class SecureErrorPage extends SecureAbstractPage {
 	/**
 	 *
 	 */

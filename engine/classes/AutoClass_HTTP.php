@@ -1,18 +1,22 @@
 <?php
 /*
  * (C) Copyright 2012 David J. W. Li
- * Project DLPSIGAME
+ * DLPWEBENGINE
+ * Forked from Build 0.2.2.432 of Project DLPSIGAME
+ *
  */
 
 /**
  * Class HTTP
  */
-class HTTP {
+class HTTP
+{
 	/**
 	 * @param string $URL
 	 * @param bool $external
 	 */
-	static public function redirectTo($URL, $external = false) {
+	static public function redirectTo($URL, $external = false)
+	{
 		if ($external) {
 			self::sendHeader('Location', $URL);
 		} else {
@@ -25,7 +29,8 @@ class HTTP {
 	 * @param string $name
 	 * @param null $value
 	 */
-	static public function sendHeader($name, $value = NULL) {
+	static public function sendHeader($name, $value = NULL)
+	{
 		header($name . (!is_null($value) ? ': ' . $value : ''));
 	}
 
@@ -35,17 +40,18 @@ class HTTP {
 	 * @param bool $multibyte
 	 * @return mixed
 	 */
-	static public function REQ($name, $default, $multibyte = false) {
+	static public function REQ($name, $default, $multibyte = false)
+	{
 		if (!isset($_REQUEST[$name])) {
 			return $default;
 		}
 
 		if (is_int($default)) {
-			return (int) $_REQUEST[$name];
+			return (int)$_REQUEST[$name];
 		}
 
 		if (is_float($default)) {
-			return (float) $_REQUEST[$name];
+			return (float)$_REQUEST[$name];
 		}
 
 		if ($default === "json") {
@@ -55,7 +61,7 @@ class HTTP {
 				return array();
 			}
 		}
-		
+
 		if (is_string($default)) {
 			$var = trim(htmlspecialchars(str_replace(array("\r\n", "\r", "\0"), array("\n", "\n", ''), $_REQUEST[$name]), ENT_QUOTES | ENT_HTML5));
 

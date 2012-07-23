@@ -1,7 +1,9 @@
 <?php
 /*
  * (C) Copyright 2012 David J. W. Li
- * Project DLPSIGAME
+ * DLPWEBENGINE
+ * Forked from Build 0.2.2.432 of Project DLPSIGAME
+ *
  */
 
 /**
@@ -68,10 +70,10 @@ abstract class LoginAbstractPage {
 	protected function getPageVars() {
 		$this->templateObj->assign_vars(array(
 			'recaptchaPublicKey' => $GLOBALS['_RECAPTCHA_PUBKEY'],
-			'gameName' => $GLOBALS['_GAME_NAME'],
-			'VERSION' => $GLOBALS['_GAME_VERSION'],
-			'BUILD' => $GLOBALS['_GAME_BUILD'],
-			'BUILDTIME' => date(DATE_ATOM, $GLOBALS['_GAME_BUILD_TIME'])
+			'siteName' => $GLOBALS['_SITE_NAME'],
+			'VERSION' => $GLOBALS['_SITE_VERSION'],
+			'BUILD' => $GLOBALS['_SITE_BUILD'],
+			'BUILDTIME' => date(DATE_ATOM, $GLOBALS['_SITE_BUILD_TIME'])
 		));
 	}
 
