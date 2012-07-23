@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="DLPWEBENGINE Json Game Files" pattern="file:engine/data//*" />
+</component>
