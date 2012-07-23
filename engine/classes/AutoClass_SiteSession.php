@@ -157,7 +157,7 @@ class SiteSession
 	 * @param int $userID
 	 * @param string $userName
 	 */
-	public static function loginPlayer($userID, $userName)
+	public static function loginUser($userID, $userName)
 	{
 		self::create();
 		$_SESSION['userID'] = $userID;

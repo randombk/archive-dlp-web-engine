@@ -9,8 +9,11 @@
     <option name="SHOW_STRUCTURE" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="245a75b0-37cc-490b-80ba-989797342742" name="Default" comment="">
+    <list default="true" id="245a75b0-37cc-490b-80ba-989797342742" name="Default" comment="Start map overlay">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/engine/classes/AutoClass_SiteSession.php" afterPath="$PROJECT_DIR$/engine/classes/AutoClass_SiteSession.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/login/Page_Login.php" afterPath="$PROJECT_DIR$/pages/login/Page_Login.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/engine/buildversion.php" afterPath="$PROJECT_DIR$/engine/buildversion.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/engine/dbtables.php" afterPath="$PROJECT_DIR$/engine/dbtables.php" />
     </list>
     <ignored path="DLPSIGAME.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,7 +33,7 @@
     <ignored path=".idea/codeStyleSettings.xml" />
     <ignored path=".idea/misc.xml" />
     <ignored path=".idea/mongoSettings.xml" />
-    <file path="/Dummy.txt" changelist="245a75b0-37cc-490b-80ba-989797342742" time="1382750429820" ignored="false" />
+    <file path="/Dummy.txt" changelist="245a75b0-37cc-490b-80ba-989797342742" time="1382753242711" ignored="false" />
     <file path="/a.php" changelist="245a75b0-37cc-490b-80ba-989797342742" time="1377532744218" ignored="false" />
     <file path="/a.java" changelist="245a75b0-37cc-490b-80ba-989797342742" time="1377532734996" ignored="false" />
     <file path="/a.css" changelist="245a75b0-37cc-490b-80ba-989797342742" time="1377532735966" ignored="false" />
@@ -42,7 +45,7 @@
     <file path="/game.php" changelist="245a75b0-37cc-490b-80ba-989797342742" time="1377550087685" ignored="false" />
     <file path="/error.log" changelist="245a75b0-37cc-490b-80ba-989797342742" time="1377538169305" ignored="false" />
     <file path="/AutoClass_RMDBS.php" changelist="245a75b0-37cc-490b-80ba-989797342742" time="1377544536476" ignored="false" />
-    <file path="/a.dummy" changelist="245a75b0-37cc-490b-80ba-989797342742" time="1379744237292" ignored="false" />
+    <file path="/a.dummy" changelist="245a75b0-37cc-490b-80ba-989797342742" time="1382753127753" ignored="false" />
     <file path="/AutoClass_RDBMS.php" changelist="245a75b0-37cc-490b-80ba-989797342742" time="1377545091396" ignored="false" />
     <file path="/AutoClass_MongoHandler.php" changelist="245a75b0-37cc-490b-80ba-989797342742" time="1377545704368" ignored="false" />
     <file path="/testbed.php" changelist="245a75b0-37cc-490b-80ba-989797342742" time="1377549828734" ignored="false" />
@@ -113,6 +116,7 @@
     <file path="/Page_Map.php" changelist="245a75b0-37cc-490b-80ba-989797342742" time="1380259612962" ignored="false" />
     <file path="/page_mapunified.tpl" changelist="245a75b0-37cc-490b-80ba-989797342742" time="1380830264705" ignored="false" />
     <file path="/UniMap.js" changelist="245a75b0-37cc-490b-80ba-989797342742" time="1380829507900" ignored="false" />
+    <file path="/*.regexp" changelist="245a75b0-37cc-490b-80ba-989797342742" time="1382753045367" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,6 +141,7 @@
     <sortChildren value="false" />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -173,7 +178,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -183,10 +187,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="buildversion.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="buildversion.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/engine/buildversion.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="177" selection-end="177" vertical-scroll-proportion="0.19790454">
+            <state line="10" column="0" selection-start="177" selection-end="177" vertical-scroll-proportion="-6.5384617">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dbtables.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/engine/dbtables.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="28" selection-start="160" selection-end="160" vertical-scroll-proportion="-5.8846154">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AutoClass_SiteSession.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/engine/classes/AutoClass_SiteSession.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="150" column="187" selection-start="3017" selection-end="3017" vertical-scroll-proportion="0.19282511">
               <folding />
             </state>
           </provider>
@@ -217,8 +239,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/engine/classes/AutoClass_DataMod.php" />
-        <option value="$PROJECT_DIR$/pages/game/html/page_research.tpl" />
         <option value="$PROJECT_DIR$/engine/classes/AutoClass_ItemHandlers.php" />
         <option value="$PROJECT_DIR$/engine/classes/GameCache/CachedResource_RESEARCH.php" />
         <option value="$PROJECT_DIR$/resources/js/Research.js" />
@@ -233,6 +253,8 @@
         <option value="$PROJECT_DIR$/pages/game/html/page_mapunified.tpl" />
         <option value="$PROJECT_DIR$/resources/js/UniMap.js" />
         <option value="$PROJECT_DIR$/engine/buildversion.php" />
+        <option value="$PROJECT_DIR$/engine/dbtables.php" />
+        <option value="$PROJECT_DIR$/engine/classes/AutoClass_SiteSession.php" />
       </list>
     </option>
   </component>
@@ -327,6 +349,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -337,23 +360,22 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Modules" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="151" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="150" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="150" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="155" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="MemberChooser.sorted" value="false" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="recentsLimit" value="5" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="155" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/handlebars/compileTemplates.bat" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="151" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="829" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="825" />
@@ -365,22 +387,22 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
     <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="options.lastSelected" value="project.scopes" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="JavaScriptLanguageLevel" value="ES5" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -413,10 +435,10 @@
     <configuration default="true" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application">
       <method />
     </configuration>
-    <configuration default="true" type="PhpHttpRequestRunConfigurationType" factoryName="PHP HTTP Request">
+    <configuration default="true" type="PhpRemoteDebugRunConfigurationType" factoryName="PHP Remote Debug" server_name="localhost">
       <method />
     </configuration>
-    <configuration default="true" type="PhpRemoteDebugRunConfigurationType" factoryName="PHP Remote Debug" server_name="localhost">
+    <configuration default="true" type="PhpHttpRequestRunConfigurationType" factoryName="PHP HTTP Request">
       <method />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -718,6 +740,7 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.05360134" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20856202" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1470911" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Runner" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.63146317" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -729,7 +752,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="JSON Formatter" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32888147" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16275346" sideWeight="0.36853686" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13713981" sideWeight="0.8241206" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13713981" sideWeight="0.791438" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18041804" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Regex" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3278328" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="FLOATING" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" x="524" y="103" width="330" height="597" />
@@ -742,7 +765,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="SQL" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20938024" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UML Diagrams" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998326" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1758794" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -853,6 +875,27 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/engine/buildversion.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/engine/buildversion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/engine/buildversion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/engine/buildversion.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="0" selection-start="177" selection-end="177" vertical-scroll-proportion="0.0">
           <folding />
         </state>
@@ -870,7 +913,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/engine/buildversion.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="177" selection-end="177" vertical-scroll-proportion="0.19790454">
+        <state line="10" column="0" selection-start="177" selection-end="177" vertical-scroll-proportion="-6.5384617">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/engine/dbtables.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="28" selection-start="160" selection-end="160" vertical-scroll-proportion="-5.8846154">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/engine/classes/AutoClass_SiteSession.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="150" column="187" selection-start="3017" selection-end="3017" vertical-scroll-proportion="0.19282511">
           <folding />
         </state>
       </provider>
@@ -974,8 +1031,8 @@
           </splitter-proportions>
           <order>
             <scope name="DLPWEBENGINE Json Game Files" />
-            <scope name="DLPWEBENGINE Engine Scope" />
             <scope name="DLPWEBENGINE Primary Scope" />
+            <scope name="DLPWEBENGINE Engine Scope" />
           </order>
         </settings>
       </state>

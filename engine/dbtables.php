@@ -6,4 +6,4 @@
  *
  */
 
-define('tblPLAYERS', 				'localPlayers');
+define('tblUSERS', 				'localUsers');
